@@ -1,0 +1,32 @@
+
+{
+    "name": "My Yt Bookmarks",
+    "version": "0.1.0",
+    "description": "Saving Timestamp in Yt videos",
+    "permissions": ["storage", "tabs"],
+    "host_permissions": ["https://*.youtube.com/*"],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+          "matches": ["https://*.youtube.com/*"],
+          "js": ["contentScript.js"]
+        }
+      ],
+    "icons":{
+        "16": "icon.png",
+        "32": "icon.png",
+        "48": "icon.png"
+    },
+    "action": {
+        "default_icon": {
+            "16": "icon.png",
+            "32": "icon.png",
+            "48": "icon.png"
+        },
+        "default_title": "My YT Bookmarks",
+        "default_popup": "popup.html"
+    },
+    "manifest_version": 3
+}
